@@ -10,6 +10,16 @@ namespace EasyEPlanner
     public interface IDeviceReader
     {
         /// <summary>
+        /// Функции для поиска устройств.
+        /// </summary>
+        Function[] deviceFunctions;
+
+        /// <summary>
+        /// Менеджер устройств.
+        /// </summary>
+        IDeviceManager deviceManager;
+
+        /// <summary>
         /// Считанные устройства
         /// </summary>
         List<IODevice> Devices { get; }
@@ -303,14 +313,5 @@ namespace EasyEPlanner
             }
         }
 
-        /// <summary>
-        /// Функции для поиска устройств.
-        /// </summary>
-        Function[] deviceFunctions;
-
-        /// <summary>
-        /// Менеджер устройств.
-        /// </summary>
-        IDeviceManager deviceManager;
     }
 }

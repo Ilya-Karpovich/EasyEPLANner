@@ -21,6 +21,21 @@ namespace EasyEPlanner
         IProjectHelper projectHelper;
         IApiHelper apiHelper;
 
+        /// <summary>
+        /// Функции для поиска модулей ввода-вывода
+        /// </summary>
+        Function[] functionsForSearching;
+
+        /// <summary>
+        /// Менеджер устройств.
+        /// </summary>
+        DeviceManager deviceManager;
+
+        /// <summary>
+        /// Менеджер узлов и модулей ввода-вывода.
+        /// </summary>
+        IO.IOManager IOManager;
+
         public DeviceBindingReader(IProjectHelper projectHelper, IApiHelper apiHelper)
         {
             this.deviceManager = DeviceManager.GetInstance();
@@ -607,19 +622,5 @@ namespace EasyEPlanner
             return channelName;
         }
 
-        /// <summary>
-        /// Функции для поиска модулей ввода-вывода
-        /// </summary>
-        Function[] functionsForSearching;
-
-        /// <summary>
-        /// Менеджер устройств.
-        /// </summary>
-        DeviceManager deviceManager;
-
-        /// <summary>
-        /// Менеджер узлов и модулей ввода-вывода.
-        /// </summary>
-        IO.IOManager IOManager;
     }
 }

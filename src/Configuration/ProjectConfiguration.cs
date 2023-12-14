@@ -11,6 +11,16 @@ namespace EasyEPlanner
     /// </summary>
     public class ProjectConfiguration
     {
+
+        ConfigurationChecker configurationChecker;
+        DeviceReader deviceReader;
+        DeviceBindingReader deviceBindingReader;
+        DeviceSynchronizer deviceSynchronizer;
+        IOReader IOReader;
+
+        static ProjectConfiguration instance;
+
+
         /// <summary>
         /// Закрытый конструктор.
         /// </summary>
@@ -154,12 +164,6 @@ namespace EasyEPlanner
             RangesIP = null;
         }
 
-        ConfigurationChecker configurationChecker;
-        DeviceReader deviceReader;
-        DeviceBindingReader deviceBindingReader;
-        DeviceSynchronizer deviceSynchronizer;
-        IOReader IOReader;
 
-        static ProjectConfiguration instance;
     }
 }

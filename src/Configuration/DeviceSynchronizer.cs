@@ -8,6 +8,12 @@ namespace EasyEPlanner
     /// </summary>
     public class DeviceSynchronizer
     {
+
+        private static IDeviceSynchronizeService synchronizeService;
+        private EplanDevice.IODevice[] prevDevices;
+        private IDeviceReader deviceReader;
+        private ITechObjectManager techObjectManager;
+
         static DeviceSynchronizer()
         {
             synchronizeService = new DeviceSynchronizeService();
@@ -138,9 +144,6 @@ namespace EasyEPlanner
             return synchronizeService;
         }
 
-        private static IDeviceSynchronizeService synchronizeService;
-        private EplanDevice.IODevice[] prevDevices;
-        private IDeviceReader deviceReader;
-        private ITechObjectManager techObjectManager;
+
     }
 }
